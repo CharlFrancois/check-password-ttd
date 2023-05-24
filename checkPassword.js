@@ -17,10 +17,10 @@ export default function checkPassword(password) {
     returnedControl.isOk = false
     returnedControl.messages.push("Le mot de passe doit contenir au moins une lettre majuscule")
   }
-  // if(!format.test(password)) {
-  //   returnedControl.isOk = false
-  //   returnedControl.messages.push("Le mot de passe doit contenir au moins une lettre majuscule")
-  // }
+  if(!format.test(password)) {
+    returnedControl.isOk = false
+    returnedControl.messages.push("Le mot de passe doit contenir au moins un caractère spécial")
+  }
   // if(password.length >= 8 && /\d/.test(password) && password !== password.toLowerCase() && format.test(password)) {
   //   returnedControl.messages.push("Le mot de passe est ok")
   // }
