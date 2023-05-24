@@ -28,7 +28,7 @@ it("should test password containe at lest one uppercase", () => {
   ]);
 });
 
-it("should test password containe at lest one uppercase", () => {
+it("should test password containe at lest one special caracter", () => {
   expect(checkPassword("iLfaitplusde!8").isOk).toBe(true);
   expect(checkPassword("iLfaitplusde!8").messages).toStrictEqual([]);
   expect(checkPassword("Ilfaitplusde8").isOk).toBe(false);
