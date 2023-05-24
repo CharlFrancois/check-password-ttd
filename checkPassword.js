@@ -5,10 +5,10 @@ export default function checkPassword(password) {
   }
 
   var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-  // if(password.length < 8) {
-  //   returnedControl.isOk = false
-  //   returnedControl.messages.push("Le mot de passe doit comporter au moins 8 caractères")
-  // }
+  if(password.length < 8) {
+    returnedControl.isOk = false
+    returnedControl.messages.push("Le mot de passe doit comporter au moins 8 caractères")
+  }
   if(!/\d/.test(password)) {
     returnedControl.isOk = false
     returnedControl.messages.push("Le mot de passe doit contenir au moins 1 chiffre")
