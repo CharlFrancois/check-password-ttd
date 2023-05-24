@@ -1,0 +1,20 @@
+name: Mon Workflow pour vérif mes tests
+run-name: Je vérifie que mes tests sont ok
+on:
+  push:
+    branches: develop
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récup le code de mon repo
+        uses: actions/checkout@v3
+
+      - name: Install dependances
+        run: npm ci
+
+      - name: Lancer mes tests
+        run: npm test
+
+      - name: Dire "Les test sont passé!"
+        run: echo "Les test sont passé"
